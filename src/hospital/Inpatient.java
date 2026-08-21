@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package hospital;
+
+/**
+ *
+ * @author Student
+ */
+public class Inpatient extends Patient {
+    
+    private int wardNumber;
+    private String bedNumber;
+    
+    public Inpateint(String patientId, String firstName, lastName, int age, String gender, String medicalCondition, int wardNumber) {
+        
+        super(patientId, firstName, lastName, age, gender, medicalCondition, PatientCategory.INPATIENT);
+        
+        this.wardNumber = wardNumber;
+        this.bedNumber = "None";
+    }
+    
+    public int getWardNumber() {
+        return bedNumber;
+    }
+    
+    public String getbedNumber() {
+        return wardNumber;
+    }
+    
+    public void  setBedNumber(String bedNumber) {
+        this.bedNumber = bedNumber;
+    }
+    
+    @Override
+    public void displayDetails() {
+        
+        super.displayDetails();
+        
+        System.out.println("Ward Number: " + wardNumber);
+        System.out.println("Bed Number " + bedNumber);
+    }
+}
+    
+
